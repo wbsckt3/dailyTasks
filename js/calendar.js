@@ -66,7 +66,8 @@ function createCalendarDay(day, month) {
   
   const dateText = today.getFullYear() + "/" + monthAsLink(month) + "/" + dayAsLink(day)
   //a.href = "sync/index.html?date=" + encodeURIComponent(dateText);
-  a.href = "https://zymec-3000.csb.app?user-date=" + encodeURIComponent(dateText);
+  const user = localStorage.getItem('dailyTasksUser')
+  a.href = "https://zymec-3000.csb.app?user-date=" + user + "_" + encodeURIComponent(dateText);
  
 
   var currentDate = new Date();
