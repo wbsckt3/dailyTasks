@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+
+<body>
+  <div id="dateText"></div>
+
+  <script>
+    // Obtener el parámetro de consulta de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const dateParam = urlParams.get('date');
+
+    // Mostrar el texto de la fecha en la página
+    const dateTextElement = document.getElementById('dateText');
+    dateTextElement.textContent = `Fecha: ${dateParam}`;
+  </script>
+
+  - poner google signin
+  - admin: interfase de crear tareas, esas tareas deben mostrarse en
+  sync/index.html
+  - usuario ingresa al día, ve las tareas creadas por el admin
+  usuario realiza tareas pone nota de la tarea realizada
+
+</body>
+
+</html>
