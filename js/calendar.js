@@ -62,9 +62,12 @@ function createCalendarDay(day, month) {
   var a = document.createElement("a");
 
   a.innerHTML = day;
-  const dateText = today.getFullYear() + "/" + monthAsLink(month) + "/" + dayAsLink(day)
-  a.href = "sync/index.html?date=" + encodeURIComponent(dateText);
   //a.href = "sync/" + today.getFullYear() + "/" + monthAsLink(month) + "/" + dayAsLink(day);
+  
+  const dateText = today.getFullYear() + "/" + monthAsLink(month) + "/" + dayAsLink(day)
+  //a.href = "sync/index.html?date=" + encodeURIComponent(dateText);
+  a.href = "https://zymec-3000.csb.app?date=" + encodeURIComponent(dateText);
+ 
 
   var currentDate = new Date();
   currentDate.setDate(day);
